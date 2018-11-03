@@ -18,10 +18,10 @@ func main() {
 		output = bufio.NewWriter(os.Stdout)
 	}
 
-	for i:=0; i<100; i++ {
+	for i := 0; i < 100; i++ {
 		fmt.Fprintln(output, strings.Repeat("x", 100))
 	}
-	if _o, ok:=output.(*bufio.Writer); ok {
+	if _o, ok := output.(*bufio.Writer); ok {
 		_o.Flush()
 	}
 
